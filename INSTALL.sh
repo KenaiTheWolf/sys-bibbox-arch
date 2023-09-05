@@ -3,8 +3,8 @@
 ---------------------------------------------------------------------------------------------------
 TODO: before running this script, run the following commands:
 
-    sudo apt install git -y
-    sudo apt-get install docker.io -y
+    sudo pacman -Sy git
+    sudo pacman -Sy docker
     sudo docker network create bibbox-default-network
     sudo groupadd docker
     sudo usermod -aG docker $USER
@@ -40,11 +40,11 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v16.19.0
 nvm use v16.19.0
 
-apt-get update
+pacman -Syu
 #apt-get install docker.io -y
-apt install docker-compose -y
-apt install npm -y
-apt install python3-pip -y
+pacman -S docker-compose -y
+pacman -S npm -y
+pacman -S python3-pip -y
 
 printf 'n\n' | npm i -g @angular/cli
 #printf 'n\n' | npm update -g @angular/cli
